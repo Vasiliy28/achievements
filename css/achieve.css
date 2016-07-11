@@ -1,0 +1,174 @@
+
+.achieve {
+    position: relative;
+    display: inline-flex;
+    height: 100px;
+    width: 100px;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    padding: 0.4em;
+    font:1em sans-serif;
+    font-weight: 600;
+    border: 0.3em solid black;
+    border-radius: 200px;
+    background-color: white;
+    text-align: center;
+    color: black;
+    box-sizing: border-box;
+}
+
+.achieve[data-count]:before {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 30%;
+    width: 30%;
+    bottom: -0.3em;
+    right: -0.3em;
+    border-radius: inherit;
+    border-width: inherit;
+    border-color: inherit;
+    border-style: inherit;
+    background-color: inherit;
+    z-index: -1;
+}
+.achieve[data-count]:after {
+    content: attr(data-count);
+    display: flex;
+    position: absolute;
+    height: 30%;
+    width: 30%;
+    bottom: 0;
+    right: 0;
+    padding-top: 5%;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    border-radius: inherit;
+    background-color: inherit;
+    text-align: center;
+
+}
+
+.achieve[data-count=""]:before,
+.achieve[data-count=""]:after,
+.achieve[data-count*="-"]:before,
+.achieve[data-count*="-"]:after,
+.achieve[data-count="1"]:before,
+.achieve[data-count="1"]:after {
+    display: none;
+}
+
+.achieve[data-count="0"]:before{
+    content: 'Not Achieve';
+    display: inline;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border: none;
+    padding-top: 35%;
+    box-sizing: inherit;
+    z-index: 100;
+}
+.achieve[data-count="0"]:after{
+    content: "";
+    width: 0;
+    height: 0;
+
+}
+
+.achieve img {
+    position: relative;
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: inherit;
+}
+
+.achieve-primary {
+    border-color: #337ab7;
+    color: #337ab7;
+}
+
+.achieve-success {
+    border-color: #5cb85c;
+    color: #5cb85c;
+}
+
+.achieve-info {
+    border-color: #5bc0de;
+    color: #5bc0de;
+}
+
+.achieve-warning {
+    border-color: #f0ad4e;
+    color: #f0ad4e;
+}
+
+.achieve-danger {
+    border-color: #d9534f;
+    color: #d9534f;
+}
+.achieve-small{
+    height: 75px;
+    width: 75px;
+    padding: 0.35em;
+    border-width: 0.25em;
+    font-size: 0.8em;
+    font-weight: 400;
+
+}
+
+
+.achieve-big{
+    height: 150px;
+    width: 150px;
+    border-width: 0.2em;
+    font-size: 1.4em;
+}
+
+.achieve-large{
+    height: 200px;
+    width: 200px;
+    border-width: 0.2em;
+    font-size: 1.8em;
+}
+
+.achieve.owl-red{
+    background-color: #F3F8FA;
+    border-color:#B09EB7;
+    color: #B09EB7;
+}
+.owl-red.achieve-large img,
+.owl-blue.achieve-large img,
+.owl-red.achieve-big img,
+.owl-blue.achieve-big img{
+    width:80% ;
+}
+.achieve.owl-blue{
+    background-color: #F3F8FA;
+    border-color: #89B8CF;
+    color: #89B8CF;
+}
+.achieve.owl-red img,
+.achieve.owl-blue img{
+    border-radius: 0;
+}
+
+.btn{
+    padding: 5px 15px;
+    outline: none;
+    text-decoration: none;
+    font-family: sans-serif;
+    color: white;
+    text-transform: uppercase;
+    font-size: 24px;
+    text-align:center ;
+    font-weight: 600;
+    background-color:#398439 ;
+    border-radius: 5px;
+}
