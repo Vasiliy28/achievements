@@ -161,6 +161,7 @@
 
 .btn{
     padding: 5px 15px;
+    display: inline-block;
     outline: none;
     text-decoration: none;
     font-family: sans-serif;
